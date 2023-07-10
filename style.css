@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to right, #fcfcfc, #00040c);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+}
+
+#currentDate {
+  font-size: 20px;
+}
+
+#predictionForm {
+  display: flex;
+  align-items: center;
+}
+
+#predictionLabel {
+  margin-right: 10px;
+}
+
+#rankingContainer {
+  width: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.chart {
+  height: 300px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* 追加のCSSスタイル */
+.cursor {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.cursor:hover {
+  background-color: #97bcf3;
+  padding: 10px;
+}
+/* ヘッダー */
+
+/* container */
+.container {
+  display: flex;
+  position: absolute;
+  right: 9px;
+  margin-left: 90px;
+}
+.container .year {
+  margin-left: 5px;
+}
+
+#predictionForm {
+  margin-left: 20px;
+}
+
+/* グラフとランキングコンテナ */
+#chartContainer,
+#rankingContainer {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/* グラフ */
+.chart {
+  margin-top: 10px;
+}
+
+/* ランキングテーブル */
+table {
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+}
+/* main */
+main {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  position: relative;
+}
+#chartContainer {
+  width: 60%;
+  height: 598px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#rankingContainer {
+  width: 32%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>"Sales Trend Analyzer"</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div id="currentDate"></div>
+      <div class="container">
+        <h3>2023年</h3>
+        <select class="month cursor">
+          予測したい月
+          <option class="cursor" value="">月</option>
+          <!-- 選択する月の表示 -->
+          <option class="cursor" value="01">1月</option>
+          <option class="cursor" value="02">2月</option>
+          <option class="cursor" value="03">3月</option>
+          <option class="cursor" value="04">4月</option>
+          <option class="cursor" value="05">5月</option>
+          <option class="cursor" value="06">6月</option>
+          <option class="cursor" value="07">7月</option>
+          <option class="cursor" value="08">8月</option>
+          <option class="cursor" value="09">9月</option>
+          <option class="cursor" value="10">10月</option>
+          <option class="cursor" value="11">11月</option>
+          <option class="cursor" value="12">12月</option>
+        </select>
+      </div>
+    </div>
+    <main>
+      <div class="main">
+        <div id="chartContainer">
+          <h2 id="chartTitle">選択された月の売り上げグラフ</h2>
+          <canvas class="chart" id="salesChart"></canvas>
+        </div>
+
+        <div id="rankingContainer">
+          <h2>商品売り上げランキング TOP10</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>商品名</th>
+                <th>売り上げ</th>
+              </tr>
+            </thead>
+            <tbody id="rankingTableBody">
+              <!-- ランキングデータがここに動的に追加されます -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
