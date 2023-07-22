@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+#header {
+  width: 100%;
+  height: 100px; /* increase the height of the header */
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between; /* change from 'space-around' to 'space-between' */
+  align-items: center;
+  border-bottom: solid 1px #eeeeee;
+  color: #343a40; /* change the color of the text in the header */
+  font-size: 1.5em; /* increase the size of the text in the header */
+  padding: 0 20px; /* add padding to the left and right of the header */
+}
+.header-section {
+  display: flex;
+  align-items: center;
+}
+#currentDate {
+  font-size: 20px;
+}
+
+#predictionForm {
+  display: flex;
+  align-items: center;
+}
+
+#predictionLabel {
+  margin-right: 10px;
+}
+
+#rankingContainer {
+  width: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.chart {
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* 追加のCSSスタイル */
+.cursor {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.cursor:hover {
+  background-color: #97bcf3;
+  padding: 10px;
+}
+/* ヘッダー */
+
+/* container */
+.container {
+  display: flex;
+  position: absolute;
+  right: 9px;
+  margin-left: 90px;
+}
+.container .year {
+  margin-left: 5px;
+}
+
+#predictionForm {
+  margin-left: 20px;
+}
+
+/* グラフとランキングコンテナ */
+#chartContainer,
+#rankingContainer {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+/* グラフ */
+.chart {
+  margin-top: 10px;
+}
+
+/* ランキングテーブル */
+table {
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 10px;
+}
+/* main */
+main {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  position: relative;
+}
+#chartContainer {
+  width: 60%;
+  height: 598px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  float: none;
+}
+
+#rankingContainer {
+  width: 32%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+/* Style the select box */
+select.month {
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 20px;
+  font-size: 1em;
+  padding: 10px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  width: 100px;
+  height: 50px;
+  background-color: #343a40;
+  color: #ffffff;
+  border: none;
+  font-size: 1em;
+  margin: 20px;
+  cursor: pointer;
+}

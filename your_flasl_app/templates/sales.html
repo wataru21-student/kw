@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <!-- existing head content -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <!-- existing body content -->
+    <div id="header">
+      <div class="header-section" id="currentDate"></div>
+      <div class="header-section" id="teamName">Team-A</div>
+      <div class="container header-section"">
+        <h3 class="year">2023年</h3>
+        <form method="POST" id="predictionForm">
+          <select class="month cursor" name="month">
+            {% for month in months %}
+            <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+          </select>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <main class="main">
+      <div id="chartContainer">
+        <h2 id="chartTitle2"></h2>
+        <canvas class="chart" id="salesChartBar"></canvas>
+      </div>
+      <div id="rankingContainer">
+        <!-- existing ranking content -->
+        <h2 id="rankingTitle">選択された月のトップ5売り上げ</h2>
+        <ul id="rankingList">
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
