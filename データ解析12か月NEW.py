@@ -91,5 +91,5 @@ with open("newsales.csv", mode='w', newline='') as file:
     for month in range(max_months):
         month_name = month_names[(month + 4) % 12]  # 5月から始まるように補正
         year = 2023 + (month + 4) // 12  # 年も補正
-        row_data = [f'23-{month_name}'] + [all_predictions[item_id][month] if month < len(all_predictions[item_id]) else 0 for item_id in range(50)]
+        row_data = [f'{month_name}-{year}'] + [all_predictions[item_id][month] if month < len(all_predictions[item_id]) else 0 for item_id in range(50)]
         writer.writerow(row_data)
