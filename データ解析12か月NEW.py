@@ -58,7 +58,7 @@ for item_id in range(50):
 # 予測結果の表示
 print('50個の商品の12か月分の売り上げ予測:')
 for item_id, item_predictions in enumerate(all_predictions, start=1):
-    print(f'商品{item_id}:', item_predictions)
+    print(f'{item_id}:', item_predictions)
 
 # 予測結果の可視化
 fig, ax = plt.subplots(figsize=(15, 8), dpi=50)
@@ -72,3 +72,24 @@ ax.legend()
 
 plt.show()
 
+import csv
+import calendar
+
+# 英語の月の略称を取得
+month_names = [calendar.month_abbr[i] for i in range(1, 13)]
+
+# 予測結果をCSVファイルに書き込む
+with open("newsales.csv", mode='w', newline='') as file:
+    writer = csv.writer(file)
+
+    # ヘッダーを書き込む
+    header = ['data'] + [str(i) for i in range(50)]
+    writer.writerow(header)
+
+    # 予測結果が12か月分未満の場合は0で埋める
+    max_months = 12
+    for month in range(max_months):
+        month_name = month_names[(month + 4) % 12]  # 5月から始まるように補正
+        year = 2023 + (month + 4) // 12  # 年も補正
+        row_data = [f'23-{month_name}'] + [all_predictions[item_id][month] if month < len(all_predictions[item_id]) else 0 for item_id in range(50)]
+        writer.writerow(row_data)
