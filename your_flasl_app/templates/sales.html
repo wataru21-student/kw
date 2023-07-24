@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <!-- existing head content -->
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- existing body content -->
+    <div id="header">
+      <div class="header-section" id="currentDate"></div>
+      <div class="header-section header-title" id="teamName">SSD-BO04</div>
+      <div class="container header-section"">
+        <h3 class="year">2023～2024</h3>
+        <form method="POST" id="predictionForm">
+          <select class="month cursor" name="month">
+            {% for month in months %}
+            <option value="{{ month }}">{{ month }}</option>
+            {% endfor %}
+          </select>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <main class="main">
+      <div id="chartContainer">
+        <h2 id="chartTitle"></h2>
+        <canvas class="chart" id="salesChartBar" width="800" height="400"></canvas>
+      </div>
+      <div id="rankingContainer">
+        <!-- existing ranking content -->
+        <h2 id="rankingTitle">トップ5売り上げ</h2>
+        <ol id="rankingList"></ol>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
